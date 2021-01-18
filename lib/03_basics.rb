@@ -28,3 +28,7 @@ def crazy_stuff(a)
     a.flatten.sort.uniq.each {|v| b << v * 2 if v % 3 != 0 }
     return b
 end
+
+def magic_array(s)
+  s.flatten.map{|e|e*2}.delete_if{|a|a%3==0}.sort.uniq 
+end
